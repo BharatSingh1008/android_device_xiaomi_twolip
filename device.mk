@@ -24,7 +24,7 @@
 # Inherit from sdm660-common
 $(call inherit-product, device/xiaomi/sdm660-common/sdm660.mk)
 
-DEVICE_PATH := device/xiaomi/tulip
+DEVICE_PATH := device/xiaomi/twolip
 
 # Inherit properties.mk
 $(call inherit-product, $(DEVICE_PATH)/device_prop.mk)
@@ -92,4 +92,4 @@ PRODUCT_PACKAGES += \
     TulipWifiOverlay
 
 # Inherit proprietary files
-$(call inherit-product, vendor/xiaomi/tulip/tulip-vendor.mk)
+$(call inherit-product, vendor/xiaomi/twolip/twolip-vendor.mk)

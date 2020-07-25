@@ -25,10 +25,10 @@
 # Inherit from sdm660-common
 -include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/xiaomi/tulip
+DEVICE_PATH := device/xiaomi/twolip
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := tulip
+TARGET_OTA_ASSERT_DEVICE := tulip,twolip
 
 #APEX
 TARGET_ENABLE_APEX := true
@@ -63,4 +63,4 @@ BOARD_VENDOR_PLATFORM := xiaomi-sdm660
 VENDOR_SECURITY_PATCH := 2020-04-05
 
 # Inherit the proprietary files
--include vendor/xiaomi/tulip/BoardConfigVendor.mk
+-include vendor/xiaomi/twolip/BoardConfigVendor.mk
