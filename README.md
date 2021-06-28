@@ -1,4 +1,4 @@
-The Xiaomi Redmi Note 6 Pro (codenamed _"tulip"_) is a mid-range smartphone from Xiaomi announced in September 2018.
+The Xiaomi Redmi Note 6 Pro (codenamed _"tulip" & twolip_) is a mid-range smartphone from Xiaomi announced in September 2018.
 
 ## Device specifications
 
@@ -28,7 +28,7 @@ The Xiaomi Redmi Note 6 Pro (codenamed _"tulip"_) is a mid-range smartphone from
 
 ```
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

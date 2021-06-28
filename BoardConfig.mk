@@ -23,32 +23,22 @@
 #
 
 # Inherit from sdm660-common
--include device/xiaomi/sdm660-common/BoardConfigCommon.mk
+include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/twolip
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := tulip,twolip
 
-#APEX
-TARGET_ENABLE_APEX := true
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
-# DT2W
-TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
-
-#Density
-TARGET_SCREEN_DENSITY := 382
-
-#Encryption
-TARGET_ENABLE_ENCRYPTION := true
+# Display
+TARGET_SCREEN_DENSITY := 440
 
 # Kernel
 TARGET_KERNEL_CONFIG := tulip_defconfig
-
 
 # Manifest
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest.xml
@@ -56,11 +46,11 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/manifest.xml
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
 BOARD_VENDORIMAGE_PARTITION_SIZE := 2147483648
 
-# Platform
-BOARD_VENDOR_PLATFORM := xiaomi-sdm660
+# Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2020-04-05
+VENDOR_SECURITY_PATCH := 2021-06-05
 
 # Inherit the proprietary files
--include vendor/xiaomi/twolip/BoardConfigVendor.mk
+include vendor/xiaomi/twolip/BoardConfigVendor.mk

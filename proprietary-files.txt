@@ -1,8 +1,5 @@
-# Audio Firmware
-vendor/firmware/dbmd4_va_fw.bin
+# Audio Power Amplifier
 vendor/firmware/tas2557_uCDSP.bin
-vendor/firmware/tfa98xx.cnt
-vendor/firmware/voice_amodel.bin
 
 # Audio ACDB
 vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
@@ -16,7 +13,7 @@ vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # Camera - from tulip V10.3.6.0.PEKMIXM
-vendor/lib/hw/camera.sdm660.so|e601f81ec830d02653e0ffb85d9b88d2815ab9ce
+vendor/lib/hw/camera.sdm660.so|78b9c0db7f8372dec2e5b3713d7ad45e6f35e109
 vendor/lib/libSNPE.so|66f23aae6d30b09121f06635c749d6ae47543359
 vendor/lib/libVDClearShot.so|fe429e3ddac8f989d2c754b6a3da36ebe8b85060
 vendor/lib/libVDSuperPhotoAPI.so|913cf65475d0329b321c912d24c98abc428d5e55
@@ -602,7 +599,6 @@ vendor/lib/libMiWatermark.so|fe09202b8283cd88f86e96a5ef52b4db94b7ade5
 vendor/lib/libft2vendor.so|1332ed2141660b9372c959ca1155575c25a73751
 
 # Consumerir
-vendor/lib/hw/consumerir.default.so:vendor/lib/hw/consumerir.sdm660.so
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sdm660.so
 
 # Fingerprint firmware
@@ -645,6 +641,16 @@ vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 
+# Graphics firmware
+vendor/firmware/a512_zap.b00
+vendor/firmware/a512_zap.b01
+vendor/firmware/a512_zap.b02
+vendor/firmware/a512_zap.elf
+vendor/firmware/a512_zap.mdt
+vendor/firmware/a530_pfp.fw
+vendor/firmware/a530_pm4.fw
+vendor/firmware/a540_gpmu.fw2
+
 # Keymaster QTI
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
 vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
@@ -656,19 +662,27 @@ vendor/lib/hw/keystore.sdm660.so
 vendor/lib64/hw/keystore.sdm660.so
 
 # Sensors
+vendor/bin/sensors.qti
+vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sensor_def_qcomdev.conf
-vendor/lib/sensors.ssc.so|2127a224529656d54b15177129ca6783784ccb24
-vendor/lib64/sensors.ssc.so|b53f9d8a5580feb9ca8f9e4efd080f76dc1d1588
+vendor/lib/hw/activity_recognition.sdm660.so
+vendor/lib/libsensor_reg.so
+vendor/lib/libsensor1.so
+vendor/lib64/hw/activity_recognition.sdm660.so
+vendor/lib64/libsensor_reg.so
+vendor/lib64/libsensor1.so
 
-# Thermal (Configs)
-vendor/etc/thermal-engine-battery.conf
-vendor/etc/thermal-engine-battery2.conf
-vendor/etc/thermal-engine-gameing.conf
-vendor/etc/thermal-engine-performance.conf
-vendor/etc/thermal-engine-map.conf
-vendor/etc/thermal-engine-default.conf
+# Sensors - from PL2_sprout-user 10 QKQ1.190828.002 00WW_4_150
+vendor/lib/sensors.ssc.so|bee13b2ad7f1ef0d2cf63708fa38ad76877ea287
+vendor/lib64/sensors.ssc.so|42577aa881baa287ec037c0e59972ad0e0358b08
+
+# Thermal
 vendor/etc/thermal-engine.conf
+vendor/bin/thermal-engine
+-vendor/lib/libthermalclient.so
+-vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalioctl.so
+vendor/lib64/libthermalfeature.so
 
-# Wifi - from jasmine
-vendor/bin/cnss-daemon
-
+# Wifi - from jasmine V11.0.8.0.QDIMIXM
+vendor/bin/cnss-daemon|a371213adc8fc7677d519c8d942761ffeee0f345
